@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Flashcard from "./Flashcard";
 import "./App.css";
 
-
 function App() {
   const [flashcards, setFlashcards] = useState([]);
   const [termInput, setTermInput] = useState("");
@@ -37,6 +36,10 @@ function App() {
     setMnemonicInput(e.target.value);
   }
 
+  const handleRefresh = () => {
+    window.location.reload();
+  }
+
   return (
     <div className="App">
       <h1>Flashcard App</h1>
@@ -60,6 +63,7 @@ function App() {
           onChange={handleMnemonicInputChange}
         />
         <button onClick={handleAddFlashcard}>Add Flashcard</button>
+        <button onClick={handleRefresh}>Delete All    </button>
       </div>
       <div className="flashcard-list">
         {flashcards.map((flashcard, index) => (

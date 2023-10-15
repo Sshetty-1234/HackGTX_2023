@@ -16,6 +16,7 @@
 }
 
 .flashcard-form button {
+  margin-right: 5px; /* Add margin to create space between buttons */
   padding: 8px 16px;
   background-color: #007bff;
   color: #fff;
@@ -96,3 +97,4 @@ img {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
 }
+
