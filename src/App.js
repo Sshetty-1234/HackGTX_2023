@@ -1,23 +1,76 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Flashcard from "./Flashcard";
+import "./App.css";
+
 
 function App() {
+  const [flashcards, setFlashcards] = useState([]);
+  const [termInput, setTermInput] = useState("");
+  const [definitionInput, setDefinitionInput] = useState("");
+  const [mnemonicInput, setMnemonicInput] = useState("");
+
+  const handleAddFlashcard = () => {
+    if (termInput && definitionInput && mnemonicInput) {
+      setFlashcards([
+        ...flashcards,
+        {
+          term: termInput,
+          definition: definitionInput,
+          mnemonic: mnemonicInput,
+        },
+      ]);
+      setTermInput("");
+      setDefinitionInput("");
+      setMnemonicInput("");
+    }
+  }
+
+  const handleTermInputChange = (e) => {
+    setTermInput(e.target.value);
+  }
+
+  const handleDefinitionInputChange = (e) => {
+    setDefinitionInput(e.target.value);
+  }
+
+  const handleMnemonicInputChange = (e) => {
+    setMnemonicInput(e.target.value);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Flashcard App</h1>
+      <div className="flashcard-form">
+        <input
+          type="text"
+          placeholder="Term"
+          value={termInput}
+          onChange={handleTermInputChange}
+        />
+        <input
+          type="text"
+          placeholder="Definition"
+          value={definitionInput}
+          onChange={handleDefinitionInputChange}
+        />
+        <input
+          type="text"
+          placeholder="Mnemonic"
+          value={mnemonicInput}
+          onChange={handleMnemonicInputChange}
+        />
+        <button onClick={handleAddFlashcard}>Add Flashcard</button>
+      </div>
+      <div className="flashcard-list">
+        {flashcards.map((flashcard, index) => (
+          <Flashcard
+            key={index}
+            term={flashcard.term}
+            definition={flashcard.definition}
+            mnemonic={flashcard.mnemonic}
+          />
+        ))}
+      </div>
     </div>
   );
 }
