@@ -1,6 +1,6 @@
 # HackGTX 2023
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was developed by Daveh Day, Hartej Singh, Prajit Raodeo, Soham Shetty
 
 ## Available Scripts
 
