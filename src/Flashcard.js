@@ -15,7 +15,7 @@ const Flashcard = ({ term, definition, mnemonic }) => {
   return (
     <div className={`flashcard ${isFlipped ? "flipped" : ""}`} onClick={flipCard}>
       <div className="front">
-        <div>
+        <div class="container">
           <strong>{term}</strong>
           <img id = {term} src = ''></img>
         </div>

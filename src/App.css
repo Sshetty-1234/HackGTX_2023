@@ -46,6 +46,13 @@
   border-radius: 8px;
 }
 
+img {
+  display: block;
+}
+
+.container > div {
+  float: left;
+}
 .flashcard .front,
 .flashcard .back {
   position: relative;
