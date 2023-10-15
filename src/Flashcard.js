@@ -17,13 +17,13 @@ const Flashcard = ({ term, definition, mnemonic }) => {
       <div className="front">
         <div>
           <strong>{term}</strong>
-          <br />
-          {definition}
+          <img id = {term} src = ''></img>
         </div>
       </div>
       <div className="back" >
-        <div>{mnemonic}</div>
-        <img id = {term} src = ''></img>
+        <strong>{definition}</strong>
+        <br />
+        {mnemonic}
       </div>
     </div>
   );
