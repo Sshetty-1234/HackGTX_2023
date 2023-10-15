@@ -3,6 +3,10 @@
 .App {
   text-align: center;
   font-family: Arial, sans-serif;
+  
+}
+body{
+  background-color: #f5ebe0;
 }
 
 .flashcard-form {
@@ -18,7 +22,7 @@
 .flashcard-form button {
   margin-right: 5px; /* Add margin to create space between buttons */
   padding: 8px 16px;
-  background-color: #007bff;
+  background-color: #5e503f;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -32,6 +36,23 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+h1{
+  font-size: 85px;
+}
+
+
+h2{
+  font-size: 50px;
+}
+
+h3{
+  font-size: 40px;
+}
+
+h4{
+  font-size: 20px;
 }
 
 .flashcard {
@@ -69,12 +90,16 @@ img {
 }
 
 .flashcard .front {
-  background-color: #f8f8f8;
+  background-color: #ffcdb2;
 }
 
 .flashcard .back {
   display: none;
+  background-color: #dde5b6;
   transform: rotateY(180deg);
+  max-height: 100%; 
+  
+  overflow: auto;
 }
 
 .flashcard.flipped .front {
@@ -87,9 +112,12 @@ img {
 }
 
 .flashcard img {
-  max-width: 200px;
-  max-height: 150px;
-  margin-top: 10px;
+  max-width: 250px;
+  max-height: 200px;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #000;
 }
 
 .card-grid {

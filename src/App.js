@@ -42,7 +42,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Flashcard App</h1>
+      <h1>Funky Cards</h1>
+      <h2>Fast | Easy | Funky</h2>
+      
       <div className="flashcard-form">
         <input
           type="text"

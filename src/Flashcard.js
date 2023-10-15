@@ -16,14 +16,14 @@ const Flashcard = ({ term, definition, mnemonic }) => {
     <div className={`flashcard ${isFlipped ? "flipped" : ""}`} onClick={flipCard}>
       <div className="front">
         <div class="container">
-          <strong>{term}</strong>
+          <strong><h3>{term}</h3></strong>
           <img id = {term} src = ''></img>
         </div>
       </div>
       <div className="back" >
-        <strong>{definition}</strong>
+        <strong><h2>{definition}</h2></strong>
         <br />
-        {mnemonic}
+       <p>Hint: {mnemonic}</p>
       </div>
     </div>
   );

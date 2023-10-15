@@ -6,7 +6,7 @@ async function generate(p, imgId) {
         method: 'POST',
         headers: {
             'content-type': 'application/json',
-            'X-RapidAPI-Key': '705ec7820cmsh6b54d731073f532p14aeb6jsn7f2809099b0d',
+            'X-RapidAPI-Key': '75761cb1f1msh365134cb86c1f30p1eb531jsn95395087812f',
             'X-RapidAPI-Host': 'openjourney1.p.rapidapi.com'
         },
         body: JSON.stringify({inputs: prompt})
