@@ -13,7 +13,7 @@ In the project directory, you can run:
 ### `npm install react-scripts`
 
 Please run this command prior to "npm start" to allow the project to run properly and efficiently.\
-Once completed, all scripts and packages will be initiated.\
+Once completed, all scripts and packages will be initiated.
 
 
 ### `npm start`
